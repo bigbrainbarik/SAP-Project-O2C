@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #191c1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Dark mode body */
+html.dark body {
+  background: #2e3132;
+  color: #eff1f2;
+}
+
+/* Keyboard focus visible styling */
+:focus-visible {
+  outline: 2px solid #004da4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(114, 119, 133, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(114, 119, 133, 0.5);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 77, 164, 0.2);
+}
+
+/* SAP table row hover */
+table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,62 @@
+import {
+  Blocks,
+  ChartNoAxesCombined,
+  ClipboardList,
+  Database,
+  FileCode2,
+  GitBranch,
+  LayoutDashboard,
+  Play,
+} from 'lucide-react'
+
+export const sidebarLinks = [
+  { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
+  { label: 'Simulation', to: '/simulation/setup', icon: Play },
+  { label: 'Document Flow', to: '/document-flow', icon: GitBranch },
+  { label: 'Master Data', to: '/master-data', icon: Database },
+  { label: 'Org Structure', to: '/org-structure', icon: Blocks },
+  { label: 'T-Codes', to: '/t-codes', icon: FileCode2 },
+  { label: 'Configuration', to: '/spro', icon: ClipboardList },
+  { label: 'Summary', to: '/summary', icon: ChartNoAxesCombined },
+]
+
+export const topNavLinks = [
+  { label: 'Inquiry', to: '/simulation/inquiry' },
+  { label: 'Quotation', to: '/simulation/quotation' },
+  { label: 'Sales Order', to: '/simulation/sales-order' },
+  { label: 'Delivery', to: '/simulation/delivery' },
+  { label: 'Billing', to: '/simulation/billing' },
+  { label: 'Payment', to: '/simulation/payment' },
+  { label: 'Docs', to: '/document-flow' },
+  { label: 'Guide', to: '/spro' },
+  { label: 'Summary', to: '/summary' },
+  { label: 'Learn', to: '/dashboard' },
+  { label: 'Help', to: '/spro' },
+  { label: 'Specs', to: '/master-data' },
+  { label: 'Review', to: '/summary' },
+  { label: 'Launchpad', to: '/dashboard' },
+  { label: 'Master Data', to: '/master-data' },
+  { label: 'SPRO', to: '/spro' },
+  { label: 'T-Code', to: '/t-codes' },
+  { label: 'Org', to: '/org-structure' },
+  { label: 'Flow', to: '/document-flow' },
+  { label: 'KPIs', to: '/summary' },
+]
+
+export const moduleTitles: Record<string, string> = {
+  '/dashboard': 'Simulation Dashboard',
+  '/simulation/setup': 'New Simulation Setup',
+  '/simulation/inquiry': 'Inquiry Workspace',
+  '/simulation/quotation': 'Quotation Workspace',
+  '/simulation/sales-order': 'Create Sales Order (VA01)',
+  '/simulation/delivery': 'Create Outbound Delivery (VL01N)',
+  '/simulation/goods-issue': 'Post Goods Issue (VL02N)',
+  '/simulation/billing': 'Create Billing Document (VF01)',
+  '/simulation/payment': 'Incoming Payment (F-28)',
+  '/document-flow': 'Document Flow',
+  '/master-data': 'Master Data',
+  '/org-structure': 'Organizational Structure',
+  '/t-codes': 'Transaction Codes',
+  '/spro': 'SPRO Configuration',
+  '/summary': 'Simulation Summary',
+}
